@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="&lt;model-viewer&gt; template" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" href="css/styles.css" rel="stylesheet" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <header class="bg-dark text-white text-center py-4">
+      <h1 class="mb-0">Realidad Aumentada Web</h1>
+      <p class="lead mb-0">
+        Implementación de modelos 3D AR en la web usando la API de model-viewer
+      </p>
+      <p class="lead mb-0">Personaje: Carl Wheezer</p>
+    </header>
+    <model-viewer
+      src="assets/carl_wheezer.glb"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      camera-controls
+      tone-mapping="neutral"
+      poster="assets/poster.webp"
+      shadow-intensity="2"
+      autoplay
+    >
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">View in your space</button>
+      <div id="ar-prompt">
+        <img src="assets/ar_hand_prompt.png" />
+      </div>
+    </model-viewer>
+    <footer class="bg-dark text-white text-center py-3">
+      <p class="mb-0">© 2024 Todos los derechos reservados. Angelmmc</p>
+    </footer>
+    <script src="js/script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+    ></script>
+  </body>
+</html>
